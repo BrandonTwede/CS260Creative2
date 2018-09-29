@@ -21,6 +21,7 @@ function getWord(part){
 }
 
 function fillInStory(){
+    $.LoadingOverlay("show");
     let regex = /(\[[\w\s]+\]*)/g, match;
     let input = $("#story").val();
     let deferreds = new Array();
@@ -40,6 +41,7 @@ function fillInStory(){
     
     $.when(...deferreds).done(function (x){
         $("#results").html(input);    
+        $.LoadingOverlay("hide");
     })
     
 }
