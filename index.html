@@ -5,13 +5,40 @@
 	    <script type="text/javascript" src="project2.js"></script>
 	</head>
 	<body>
-		<div id="container">
+		<div id="titlebox">
 			<h1>CS260 Creativity Project #2</h1>
 			<h4>Made by Brandon Twede</h4>
+		</div>
+		<div id="container">
+
+			<h3>Mad-libs story random-word filler</h3>
+			<p>Type a mad-libs style story into the box below, and click the button to have the story filled with randomly selected words!</p>		
 			<div class="horizontal_div">
-			    <input type="button" value="Get Random Word" onClick="getWord()">
-			    <p id="results"></p>
+				<textarea id="story" cols="50" rows="15" placeholder="Type your story here"></textarea>
+				<br/> <br/>
+				<input type="submit" value="Fill in Story" onClick="fillInStory()">
 			</div>
+			<div class="horizontal_div">
+				<fieldset>
+				<legend>Usage</legend>
+				<p>As you are typing your mad-lib story, indicate which words you would like to randomly replace by typing a part of speech enclosed by square brackets (e.g. "[noun]")</p>
+				<p>The finished story will be shown below. Words replaced will be colored red. Hovering over the words will show the definition.</p>
+				</fieldset>
+			</div>
+			<br/>
+			<div class="clearFloat"></div>
+			<p class="small">
+				Want an example story to try? Copy and paste this text: <br/>
+				Once there was a [noun] who went for a walk to the [noun]. On the way, it decided to [verb] very [adverb]- all the way there! What a [adjective] thing to do.
+			</p>
+
+			<div>
+				<h3>Results:</h3>
+				<p id="results"></p>
+			</div>
+			<br/>
+			<br/>
+			<p class="small">Creator's note/disclaimer: I apologize in advance for any offensive stories this may create, as I have no control over random word selection. Although, most of the time it just generates nonsense.</p>
 		</div>
 	</body>
 </html>

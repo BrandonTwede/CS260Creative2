@@ -1,16 +1,26 @@
 body {
-    font-family:Verdana sans-serif;
+    font: 15px Arial, sans-serif;
     margin:10px 10%;
     width:80%;
-    background-color:#008c1e;
+    
     display:inline-block;
 }
 
+text {
+    color:red;
+}
+
+#titlebox {
+    background-color:#7cacf9;
+    padding:20px 100px;
+}
+
+.small {
+    font-size: .85em;
+}
 #container {
-    background-color:#f4f4f4;
     min-height:400px;
     padding:1px 15px 20px 20px;
-    border-radius:20px;
     overflow:auto;
 }
 
@@ -23,4 +33,8 @@ body {
 
 .horizontal_div + .horizontal_div {
     margin-left:50px;
+}
+
+.clearFloat{
+    clear:both;
 }
